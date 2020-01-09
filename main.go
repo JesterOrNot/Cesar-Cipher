@@ -119,6 +119,7 @@ func letterToIndex(letter byte) int {
 	case 'z':
 		return 26
 	}
+	return ' '
 }
 func splitWord(word string) []byte {
 	return []byte(word)
@@ -127,5 +128,6 @@ func splitText(text string) []string {
 	return strings.Split(text, " ")
 }
 func main() {
-	fmt.Println(splitWord("a"))
+	fmt.Println(string(splitWord("Hi")))
+	fmt.Println(indexToLetter(1))
 }
